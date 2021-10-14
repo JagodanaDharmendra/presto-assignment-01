@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/output.css";
 
 import { connect } from "react-redux";
 
@@ -6,6 +7,8 @@ import {
   increaseCounter,
   decreaseCounter,
 } from "./redux/counter/counter.actions";
+
+import Footer from "./components/footer/footer";
 
 function App(props) {
   return (
@@ -15,6 +18,7 @@ function App(props) {
       <button onClick={() => props.increaseCounter()}>Increase Count</button>
 
       <button onClick={() => props.decreaseCounter()}>Decrease Count</button>
+      <Footer />
     </div>
   );
 }
