@@ -19,7 +19,7 @@ const socialIcons = [
 
 export default function Footer() {
   return (
-    <footer className="w-full flex flex-auto justify-between bg-gray-400 px-8 py-2">
+    <footer className="w-full flex justify-between bg-gray-400 px-8 py-2">
       <div className="flex flex-row space-x-4">
         {socialIcons?.map((current) => (
           <SocialIcons IconType={current.icon} href={current.url} />
