@@ -1,6 +1,3 @@
-import { FaHeart } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
-
 const menuIcons = [
   {
     icon: HomeIcon,
@@ -34,7 +31,7 @@ export default function Header({ title }) {
     <header className="w-full flex justify-between bg-white px-8 py-2 h-16 items-center shadow-md">
       <div className="flex flex-row space-x-4 items-center">
         <AppIcon />
-        <p className="font-bold text-xl">{title ?? "IFlix"}</p>
+        <span className="font-bold text-xl">{title ?? "IFlix"}</span>
       </div>
       <div className="flex flex-row space-x-8">
         {menuIcons?.map((current) => (
