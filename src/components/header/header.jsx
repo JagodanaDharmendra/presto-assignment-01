@@ -34,8 +34,9 @@ export default function Header({ title }) {
         <span className="font-bold text-xl">{title ?? "IFlix"}</span>
       </div>
       <div className="flex flex-row space-x-8">
-        {menuIcons?.map((current) => (
+        {menuIcons?.map((current, index) => (
           <MenuIcons
+            key={index}
             Icon={current.icon}
             href={current.url}
             isActive={current.isActive}
@@ -86,7 +87,7 @@ function BackIcon() {
 
 function MenuIcons({ Icon, href, isActive = false, isSelected }) {
   return (
-    <a href={href}>
+    <a href={href} key={Icon}>
       <svg
         width="24"
         height="24"

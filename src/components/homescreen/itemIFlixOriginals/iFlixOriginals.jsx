@@ -6,7 +6,7 @@ export default function IFlixOriginals({ data }) {
   return (
     <HorizontalScrollView title="iFlix Originals">
       {data?.map((current) => {
-        return <Item {...current} onClick={() => {}} />;
+        return <Item key={current.alt} {...current} onClick={() => {}} />;
       })}
     </HorizontalScrollView>
   );

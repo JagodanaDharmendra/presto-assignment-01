@@ -6,7 +6,7 @@ export default function RecommendedMovies({ data }) {
   return (
     <HorizontalScrollView title="Recommended Movies" onClickSeeAll={() => {}}>
       {data?.map((current) => {
-        return <Item {...current} onClick={() => {}} />;
+        return <Item key={current.alt} {...current} onClick={() => {}} />;
       })}
     </HorizontalScrollView>
   );

@@ -3,6 +3,7 @@ import React from "react";
 export default function Item(props) {
   return (
     <div
+      key={props.src}
       className="p-2 mr-4 w-64 md:w-112"
       onClick={() => {
         console.log(`item Clicked with image : ${props.src}`);

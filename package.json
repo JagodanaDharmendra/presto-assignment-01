@@ -22,9 +22,14 @@
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
     "autoprefixer": "^10.3.7",
+    "babel-jest": "26.6.0",
+    "jest": "26.6.0",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
+    "react-test-renderer": "^17.0.2",
     "tailwindcss": "^2.2.16"
   },
   "scripts": {
@@ -34,7 +39,8 @@
     "eject": "react-scripts eject",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/output.css",
     "netlify:production": "npm run build && netlify deploy --prod",
-    "netlify:dev": "npm run build && netlify deploy"
+    "netlify:dev": "npm run build && netlify deploy",
+    "jest:test": "jest"
   },
   "eslintConfig": {
     "extends": [

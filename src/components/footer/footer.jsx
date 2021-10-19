@@ -22,7 +22,11 @@ export default function Footer() {
     <footer className="w-full flex justify-between bg-gray-800 px-8 py-3">
       <div className="flex flex-row space-x-5">
         {socialIcons?.map((current) => (
-          <SocialIcons IconType={current.icon} href={current.url} />
+          <SocialIcons
+            key={current.url}
+            IconType={current.icon}
+            href={current.url}
+          />
         ))}
       </div>
 

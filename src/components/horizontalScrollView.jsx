@@ -3,6 +3,7 @@ import React from "react";
 export default function HorizontalScrollView(props) {
   return (
     <div
+      key={props.title}
       className={
         "py-3 " +
         (props.background && props.background === true

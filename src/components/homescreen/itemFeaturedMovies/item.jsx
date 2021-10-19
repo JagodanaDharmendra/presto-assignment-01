@@ -3,6 +3,7 @@ import React from "react";
 export default function Item({ src, alt, onClick }) {
   return (
     <div
+      key={alt}
       className="p-2"
       onClick={() => {
         console.log(`item Clicked with image : ${src}`);

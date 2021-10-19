@@ -5,7 +5,7 @@ export default function Slider({ data }) {
     <div>
       <Carousel effect="slidex" autoplay>
         {data?.map((current) => (
-          <div className="">
+          <div key={current.alt}>
             <div className="w-screen max-h-111 h-111">
               <img
                 src={current.src}
