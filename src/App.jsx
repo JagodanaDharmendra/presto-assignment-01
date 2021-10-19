@@ -110,7 +110,7 @@ const data = {
   moviesData,
 };
 
-function App({}) {
+function App() {
   return (
     <Switch>
       <Route path="/about">
