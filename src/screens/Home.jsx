@@ -1,12 +1,12 @@
 import React from "react";
 
-import Header from "../components/header/header";
-import Footer from "../components/footer/footer";
-import Slider from "../components/homescreen/slider";
-import NewReleases from "../components/homescreen/itemNewReleases/newReleases";
-import IFlixOriginals from "../components/homescreen/itemIFlixOriginals/iFlixOriginals";
-import FeaturedMovies from "../components/homescreen/itemFeaturedMovies/featuredMovies";
-import RecommendedMovies from "../components/homescreen/itemRecommendedMovies/recommendedMovies";
+import Header from "../components/header/Header";
+import Footer from "../components/footer/Footer";
+import Slider from "../components/homescreen/Slider";
+import NewReleases from "../components/homescreen/itemNewReleases/NewReleases";
+import IFlixOriginals from "../components/homescreen/itemIFlixOriginals/IFlixOriginals";
+import FeaturedMovies from "../components/homescreen/itemFeaturedMovies/FeaturedMovies";
+import RecommendedMovies from "../components/homescreen/itemRecommendedMovies/RecommendedMovies";
 
 export default function Home({
   sliderData,

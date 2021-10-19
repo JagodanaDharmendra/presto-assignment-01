@@ -1,6 +1,6 @@
 import React from "react";
-import HorizontalScrollView from "../../horizontalScrollView";
-import Item from "./item";
+import HorizontalScrollView from "../../HorizontalScrollView";
+import Item from "./Item";
 
 export default function FeaturedMovies({ data }) {
   return (
