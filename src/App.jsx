@@ -4,18 +4,15 @@ import "antd/dist/antd.css";
 
 import { connect } from "react-redux";
 
+import { Switch, Route } from "react-router-dom";
+
 import {
   increaseCounter,
   decreaseCounter,
 } from "./redux/counter/counter.actions";
 
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import Slider from "./components/homescreen/slider";
-import NewReleases from "./components/homescreen/itemNewReleases/newReleases";
-import IFlixOriginals from "./components/homescreen/itemIFlixOriginals/iFlixOriginals";
-import FeaturedMovies from "./components/homescreen/itemFeaturedMovies/featuredMovies";
-import RecommendedMovies from "./components/homescreen/itemRecommendedMovies/recommendedMovies";
+import Home from "./screens/Home";
+import About from "./screens/About";
 
 const sliderData = [
   {
@@ -28,11 +25,13 @@ const sliderData = [
   },
 ];
 
-const featuredMoviesData = [{
-  id: "movie-jest",
-  src: "./images/movies/img-boat.jpeg",
-  alt: "Jest movie poster",
-},];
+const featuredMoviesData = [
+  {
+    id: "movie-jest",
+    src: "./images/movies/img-boat.jpeg",
+    alt: "Jest movie poster",
+  },
+];
 
 const newReleasesData = [
   {
@@ -66,7 +65,6 @@ const newReleasesData = [
     alt: "Try again movie poster",
   },
 ];
-
 
 const moviesData = [
   {
@@ -105,25 +103,24 @@ const moviesData = [
   },
 ];
 
-function App(props) {
-  return (
-    <div className="flex flex-col h-screen">
-      <Header />
-      <main className="flex-1 overflow-y-auto">
-        <Slider data={sliderData} />
-        <NewReleases data={newReleasesData} />
-        <IFlixOriginals data={moviesData} />
-        <hr className="my-4 mx-8" />
-        <FeaturedMovies data={featuredMoviesData} />
-        <Slider data={sliderData.slice(0, 1)} />
-        <RecommendedMovies data={moviesData} />
-        {/* <div>Count: {props.count}</div>
+const data = {
+  sliderData,
+  featuredMoviesData,
+  newReleasesData,
+  moviesData,
+};
 
-        <button onClick={() => props.increaseCounter()}>Increase Count</button>
-        <button onClick={() => props.decreaseCounter()}>Decrease Count</button> */}
-      </main>
-      <Footer />
-    </div >
+function App({}) {
+  return (
+    <Switch>
+      <Route path="/about">
+        <About />
+      </Route>
+
+      <Route path="/">
+        <Home {...data} />
+      </Route>
+    </Switch>
   );
 }
 
