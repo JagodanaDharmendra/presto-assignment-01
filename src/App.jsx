@@ -6,11 +6,6 @@ import { connect } from "react-redux";
 
 import { Switch, Route } from "react-router-dom";
 
-import {
-  increaseCounter,
-  decreaseCounter,
-} from "./redux/counter/counter.actions";
-
 import Home from "./screens/Home";
 import About from "./screens/About";
 
@@ -124,18 +119,4 @@ function App() {
   );
 }
 
-const mapStateToProps = (state) => {
-  return {
-    count: state.counter.count,
-  };
-};
-
-const mapDispatchToProps = (dispatch) => {
-  return {
-    increaseCounter: () => dispatch(increaseCounter()),
-
-    decreaseCounter: () => dispatch(decreaseCounter()),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;

@@ -9,9 +9,8 @@ import App from "./App";
 
 import reportWebVitals from "./reportWebVitals";
 
-import { Provider } from "react-redux";
-
 import store from "./redux/store";
+import { Provider } from "react-redux";
 
 import * as Sentry from "@sentry/react";
 import { Integrations } from "@sentry/tracing";

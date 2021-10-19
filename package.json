@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.4.1",
+    "@reduxjs/toolkit": "^1.6.2",
     "@sentry/react": "^6.13.3",
     "@sentry/tracing": "^6.13.3",
     "@testing-library/jest-dom": "^5.11.4",
