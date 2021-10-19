@@ -2,8 +2,6 @@ import React from "react";
 import "./styles/output.css";
 import "antd/dist/antd.css";
 
-import { connect } from "react-redux";
-
 import { Switch, Route } from "react-router-dom";
 
 import Home from "./screens/Home";
