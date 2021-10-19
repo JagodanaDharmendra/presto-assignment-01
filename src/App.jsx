@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/output.css";
 import "antd/dist/antd.css";
 
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Home from "./screens/Home";
 import About from "./screens/About";
@@ -105,15 +105,17 @@ const data = {
 
 function App() {
   return (
-    <Switch>
-      <Route path="/about">
-        <About />
-      </Route>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
 
-      <Route path="/">
-        <Home {...data} />
-      </Route>
-    </Switch>
+        <Route path="/">
+          <Home {...data} />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

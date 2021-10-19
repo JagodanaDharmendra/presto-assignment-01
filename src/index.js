@@ -4,7 +4,6 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 
-import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 import reportWebVitals from "./reportWebVitals";
@@ -30,9 +29,7 @@ Sentry.captureMessage("Application Started");
 ReactDOM.render(
   <Provider store={store}>
     <React.StrictMode>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <App />
     </React.StrictMode>
   </Provider>,
   document.getElementById("root")
